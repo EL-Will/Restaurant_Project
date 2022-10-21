@@ -1,0 +1,563 @@
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+/* Box Singup */
+.flex-box-logout{
+    margin-top: 20px;
+    height: 850px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-logout{
+    width:380px;
+    height:800px;
+    background-color: #1c1c1c;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+.box-logout::before{
+    content: '';
+    width:380px;
+    height:600px;
+    background: linear-gradient(0deg,transparent,rgb(216, 179, 15),rgb(216, 179, 15)) ;
+    position: absolute;
+    top:-50%;
+    left:-50%;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+
+}
+.box-logout::after{
+    content: '';
+    width:380px;
+    height:600px;
+    background: linear-gradient(0deg,transparent,rgb(216, 179, 15),rgb(216, 179, 15)) ;
+    position: absolute;
+    top:-50%;
+    left:-50%;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.form-logout{
+    position: absolute;
+    inset: 2px;
+    background: #28292d;
+    z-index: 10;
+    border-radius: 8px;
+    padding: 40px 40px;
+    display: flex;
+    flex-direction: column;
+}
+.form-logout h2{
+    color: rgb(216, 179, 15);
+    font-weight: 500;
+    font-family: 'Roboto',sans-serif;
+    text-align: center;
+    margin-top: 0px;
+    letter-spacing: 0.1em;
+}
+/* input user */
+.input-Box-logout1{
+    position: relative;
+    width: 300px;
+    margin-top: 40px;
+}
+.input-Box-logout1 input{
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color:#1c1c1c;
+    font-family: 'Roboto',sans-serif;
+    letter-spacing: 0.05em;
+    z-index: 10;
+}
+.input-Box-logout1 span{
+    position: absolute;
+    left: 0;
+    margin-top:25px;
+    font-size: 1em;
+    color: gray;
+    font-family: 'Roboto',sans-serif;
+    pointer-events: none;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+.input-Box-logout1 input:valid~span,
+.input-Box-logout1 input:focus~span{
+    color:rgb(216, 179, 15);
+    font-size: 0.75em;
+    transform: translateY(-35px);
+}
+.input-Box-logout1 i{
+    height: 2px;
+    width: 100%;
+    background: rgb(216, 179, 15) ;
+
+    left: 0;
+    bottom: 0;
+    border-radius: 4px;
+    transition: 0.5s;
+    pointer-events: none;
+    position: absolute;
+}
+.input-Box-logout1 input:valid~i,
+.input-Box-logout1 input:focus~i{
+    height:40px;
+}
+/* input email */
+.input-Box-email{
+    position: relative;
+    width: 300px;
+    margin-top: 30px;
+}
+.input-Box-email input{
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color:#1c1c1c;
+    font-family: 'Roboto',sans-serif;
+    letter-spacing: 0.05em;
+    z-index: 10;
+}
+.input-Box-email span{
+    position: absolute;
+    left: 0;
+    margin-top:25px;
+    font-size: 1em;
+    color: gray;
+    font-family: 'Roboto',sans-serif;
+    pointer-events: none;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+.input-Box-email input:valid~span,
+.input-Box-email input:focus~span{
+    color:rgb(216, 179, 15);
+    font-size: 0.75em;
+    transform: translateY(-35px);
+}
+.input-Box-email i{
+    height: 2px;
+    width: 100%;
+    background: rgb(216, 179, 15) ;
+
+    left: 0;
+    bottom: 0;
+    border-radius: 4px;
+    transition: 0.5s;
+    pointer-events: none;
+    position: absolute;
+}
+.input-Box-email input:valid~i,
+.input-Box-email input:focus~i{
+    height:40px;
+}
+/* input password */
+.input-Box-logout2{
+    position: relative;
+    width: 300px;
+    margin-top: 30px;
+}
+.input-Box-logout2 input{
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color:#1c1c1c;
+    font-family: 'Roboto',sans-serif;
+    letter-spacing: 0.05em;
+    z-index: 10;
+}
+.input-Box-logout2 span{
+    position: absolute;
+    left: 0;
+    margin-top:25px;
+    font-size: 1em;
+    color: gray;
+    font-family: 'Roboto',sans-serif;
+    pointer-events: none;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+.input-Box-logout2 input:valid~span,
+.input-Box-logout2 input:focus~span{
+    color:rgb(216, 179, 15);
+    font-size: 0.75em;
+    transform: translateY(-35px);
+}
+.input-Box-logout2 i{
+    height: 2px;
+    width: 100%;
+    background: rgb(216, 179, 15) ;
+
+    left: 0;
+    bottom: 0;
+    border-radius: 4px;
+    transition: 0.5s;
+    pointer-events: none;
+    position: absolute;
+}
+.input-Box-logout2 input:valid~i,
+.input-Box-logout2 input:focus~i{
+    height:40px;
+}
+/* confirm pass */
+.input-Box-logout3{
+    position: relative;
+    width: 300px;
+    margin-top: 30px;
+}
+.input-Box-logout3 input{
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color:#1c1c1c;
+    font-family: 'Roboto',sans-serif;
+    letter-spacing: 0.05em;
+    z-index: 10;
+}
+.input-Box-logout3 span{
+    position: absolute;
+    left: 0;
+    margin-top:25px;
+    font-size: 1em;
+    color: gray;
+    font-family: 'Roboto',sans-serif;
+    pointer-events: none;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+.input-Box-logout3 input:valid~span,
+.input-Box-logout3 input:focus~span{
+    color:rgb(216, 179, 15);
+    font-size: 0.75em;
+    transform: translateY(-35px);
+}
+.input-Box-logout3 i{
+    height: 2px;
+    width: 100%;
+    background: rgb(216, 179, 15) ;
+
+    left: 0;
+    bottom: 0;
+    border-radius: 4px;
+    transition: 0.5s;
+    pointer-events: none;
+    position: absolute;
+}
+.input-Box-logout3 input:valid~i,
+.input-Box-logout3 input:focus~i{
+    height:40px;
+}
+/* city */
+.input-city{
+    position: relative;
+    width: 300px;
+    margin-top: 30px;
+}
+.input-city select{
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color:#1c1c1c;
+    font-family: 'Roboto',sans-serif;
+    letter-spacing: 0.05em;
+    z-index: 10;
+}
+.input-city span{
+    position: relative;
+    left: 0;
+    margin-top:25px;
+    font-size: 0.8em;
+    color: rgb(216, 179, 15);
+    font-family: 'Roboto',sans-serif;
+    pointer-events: none;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+.input-city i{
+    height: 2px;
+    width: 100%;
+    background: rgb(216, 179, 15) ;
+    left: 0;
+    bottom: 0;
+    border-radius: 4px;
+    transition: 0.5s;
+    pointer-events: none;
+    position: absolute;
+}
+.input-city select:valid~i,
+.input-city select:focus~i{
+    height:45px;
+}
+/* district */
+.input-district{
+    position: relative;
+    width: 300px;
+    margin-top: 10px;
+}
+.input-district select{
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color:#1c1c1c;
+    font-family: 'Roboto',sans-serif;
+    letter-spacing: 0.05em;
+    z-index: 10;
+}
+.input-district span{
+    position: relative;
+    left: 0;
+    margin-top:25px;
+    font-size: 0.8em;
+    color: rgb(216, 179, 15);
+    font-family: 'Roboto',sans-serif;
+    pointer-events: none;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+.input-district i{
+    height: 2px;
+    width: 100%;
+    background: rgb(216, 179, 15) ;
+    left: 0;
+    bottom: 0;
+    border-radius: 4px;
+    transition: 0.5s;
+    pointer-events: none;
+    position: absolute;
+}
+.input-district select:valid~i,
+.input-district select:focus~i{
+    height:45px;
+}
+/* ward */
+.input-ward{
+    position: relative;
+    width: 300px;
+    margin-top: 10px;
+}
+.input-ward select{
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color:#1c1c1c;
+    font-family: 'Roboto',sans-serif;
+    letter-spacing: 0.05em;
+    z-index: 10;
+}
+.input-ward span{
+    position: relative;
+    left: 0;
+    margin-top:25px;
+    font-size: 0.8em;
+    color: rgb(216, 179, 15);
+    font-family: 'Roboto',sans-serif;
+    pointer-events: none;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+.input-ward i{
+    height: 2px;
+    width: 100%;
+    background: rgb(216, 179, 15) ;
+    left: 0;
+    bottom: 0;
+    border-radius: 4px;
+    transition: 0.5s;
+    pointer-events: none;
+    position: absolute;
+}
+.input-ward select:valid~i,
+.input-ward select:focus~i{
+    height:45px;
+}
+/* button */
+button{
+    border: none;
+    outline: none;
+    background: rgb(216, 179, 15);
+    padding: 11px 25px;
+    width: 100px;
+    margin-top: 30px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+}
+#error-user-name{
+    color:rgb(216, 179, 15);
+    font-family: 'Roboto',sans-serif;
+    font-size: 13px;
+}
+#error-pass{
+    color:rgb(216, 179, 15);
+    font-family: 'Roboto',sans-serif;
+    font-size: 13px;
+}
+#error-confirm-pass{
+    color:rgb(216, 179, 15);
+    font-family: 'Roboto',sans-serif;
+    font-size: 13px;
+}
+#error-email{
+    color:rgb(216, 179, 15);
+    font-family: 'Roboto',sans-serif;
+    font-size: 13px;
+}
+.eye-box{
+    margin-top: 50px;
+    margin-left: 310px;
+    position: absolute;
+    cursor: pointer;
+    color:rgb(216, 179, 15);
+}
+.flex-box-eye{
+    display: flex;
+    flex-direction: row;
+}
+.eye-box-confirm{
+    margin-top: 50px;
+    margin-left: 310px;
+    position: absolute;
+    cursor: pointer;
+    color:rgb(216, 179, 15);
+}
+/* Dispaly notification */
+.box-notification{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f2f2f2;
+    overflow: hidden;
+}
+.toast{
+    margin-top: -2080px;
+    position: absolute;
+    right: 30px;
+    border-radius: 12px;
+    background: #fff;
+    padding: 20px 35px 20px 25px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    border-left: 6px solid rgb(216, 179, 15);
+    overflow: hidden;
+    /* transform: translateX(calc( -5px)); */
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+}
+.toast.active{
+    transform: translateY(600px);
+}
+
+.toast .toast-content{
+    display: flex;
+    align-items: center;
+}
+.toast-content .check{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    width: 35px;
+    background-color: rgb(216, 179, 15);
+    color: #fff;
+    font-size: 20px;
+    border-radius: 50%;
+}
+.toast-content .message{
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+}
+
+.message .text-notifi{
+    font-size: 20px;
+    font-weight: 400;;
+    color: #666666;
+}
+
+.message .text-notifi.text-1{
+    font-weight: 600;
+    color: #333;
+}
+
+.toast .close{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    padding: 5px;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.toast .close:hover{
+    opacity: 1;
+}
+
+.toast .progress{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background: #ddd;
+}
+
+.toast .progress:before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(216, 179, 15);
+}
+
+.progress.active:before{
+    animation: progress 5s linear forwards;
+}
+
+@keyframes progress {
+    100%{
+        right: 100%;
+    }
+}

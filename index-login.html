@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylelogin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script defer src="./app.js"></script>
+    <script defer src="./appLogin.js"></script>
+</head>
+
+<body onload="statusLogin()">
+    <nav>
+        <ul>
+            <div class="box-ul">
+                <li>
+                    <a href="/index.html">Thực đơn</a>
+                </li>
+                <li>
+                    <a href="/index-aboutme.html">Về chúng tôi</a>
+                </li>
+                <li>
+                    <a href="/index-order.html">Đặt bàn</a>
+                </li>
+            </div>
+            <div class="box-ul2">
+                <li>
+                    <a class="href" href="/index-login.html">Đăng nhập</a>
+                </li>
+                <li>
+                    <a class="href" href="/index-singup.html">Đăng ký</a>
+                </li>
+            </div>
+        </ul>
+    </nav>
+
+    <div class="nameRestaurant">
+        <h1>OBITO</h1>
+    </div>
+    <div class="flex-box-login">
+        <div class="box-login">
+            <div class="form-login">
+                <h2>Sing in</h2>
+                <div class="inputBoxlogin1">
+                    <input type="text" required="required" class="inputEmail">
+                    <span>Email</span>
+                    <i></i>
+                </div>
+                <span id="inforEmail"></span>
+                <div class="flex-box-eye">
+                    <i class="fa-regular fa-eye-slash eye-box" onclick="showPass()" id="eye"></i>
+                    <div class="inputBoxlogin2">
+                        <input type="password" required="required" class="inputPass">
+                        <span>Password</span>
+                        <i></i>
+                    </div>
+                </div>
+                <span id="inforPass"></span>
+                <div class="links">
+                    <a href="index-forgot-pass.html">Forgot Password</a>
+                    <a href="/index-singup.html">Singup</a>
+                </div>
+                <button id="login">Login</button>
+                <!-- <input type="submit" value="Login" id="login"> -->
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

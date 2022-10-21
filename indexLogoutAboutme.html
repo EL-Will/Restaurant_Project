@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-aboutme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script defer src="./app.js"></script>
+    <script defer src="./appLogout.js"></script>
+</head>
+
+<body onload="checkLogout()">
+    <nav>
+        <ul>
+            <div class="box-ul">
+                <li>
+                    <a href="/indexLogoutMenu.html">Thực đơn</a>
+                </li>
+                <li>
+                    <a href="/indexLogoutAboutme.html">Về chúng tôi</a>
+                </li>
+                <li>
+                    <a href="/indexLogoutOrder.html">Đặt bàn</a>
+                </li>
+            </div>
+            <div class="box-ul2">
+                <li>
+                    <button id="logout">Đăng xuất</button>
+                </li>
+                <li>
+                    <div class="box-User">
+                        <input type="submit" id="information" onclick="userInfor()">
+                        <div class="changePass showpass">
+                            <a href="index-change-passWord.html">Đổi mật khẩu</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <span id="display-username"></span>
+                </li>
+            </div>
+        </ul>
+    </nav>
+    <div class="nameRestaurant">
+        <h1>OBITO</h1>
+    </div>
+    <div class="box1-aboutme">
+        <div class="flex1">
+            <img src="./image/sushi12.jpg" width="450px" height="350px" alt="sushi12">
+            <div class="flex3">
+                <h1 style="color: white; font-size: 40px;">Obito</h1>
+                <p style="color: white; font-size: 20px;">Obito đối với chúng tôi là một loại nghệ
+                    thuật có
+                    thể cùng lúc thỏa mãn cái tôi của người nghệ sĩ và
+                    mang đến cho người thưởng thức một trải nghiệm chưa
+                    từng có. Mỗi người dám thử sẽ có những trải nghiệm rất
+                    khác nhau, khi, bản thân giao việc lựa chọn “cái mình
+                    sẽ thích” cho một người khác. Và với vị trí là người
+                    được giao phó, chúng tôi luôn cố gắng đem sự tỉ mỉ và
+                    hoàn hảo vào từng món ăn để phục vụ thực khách một cách
+                    chỉnh chu nhất, nhằm mang đến một trải nghiệm ẩm thực
+                    Obito trọn vẹn và đáng nhớ.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="box2-aboutme">
+        <div class="flex1">
+            <div class="flex3">
+                <h1 style="color: white; font-size: 40px;">Về chúng tôi</h1>
+                <p style="color: white; font-size: 20px;">
+                    Nếu bạn đang tìm kiếm một hương vị ẩm thực độc đáo,
+                    một sự kết hợp hoàn hảo giữa ẩm thực Nhật Bản và những
+                    biến tấu đầy nghệ thuật thì thực đơn tại Kasen sẽ là một
+                    trải nghiệm đáng giá. Tại Kasen, chúng tôi kế thừa và
+                    tiếp tục phát triển phong cách ẩm thực của bậc thầy
+                    sushi hàng đầu Shinji Murata. Những món ăn Nhật Bản
+                    truyền thống giờ đây được thêm thắt những giá trị
+                    ẩm thực mới, mang đến sự bùng nổ về hương vị kèm theo
+                    sự mới lạ khi thưởng thức.
+                </p>
+            </div>
+            <img src="./image/sushi13.jpg" width="450px" height="300px" alt="sushi13">
+        </div>
+    </div>
+
+    <div class="border1"></div>
+    <div class="flex-box3">
+        <div>
+            <img style="margin-top: 25px;" src="./image/sushi14.jpg" width="450px" height="300px" alt="sushi14">
+            <p style="color: white; font-size: 15px; text-align: justify; width: 450px;">
+                Cơm được phục vụ ấm nóng kết hợp đơn giản cùng cá tươi tạo ra
+                vị ngọt dịu cuốn hút như được phủ sốt khi thưởng thức.
+            </p>
+        </div>
+
+        <div>
+            <img style="margin-top: 25px;" src="./image/sushi15.jpg" width="450px" height="300px" alt="sushi15">
+            <p style="color: white; font-size: 15px; text-align: justify; width: 450px;">
+                Sushi và Sashimi đạt độ mềm tự nhiên,
+                tạo cảm giác tan trong miệng, nhờ vào nghệ thuật cắt cá điêu luyện
+                và kinh nghiệm chế biến từ người đầu bếp.
+            </p>
+        </div>
+    </div>
+    <div class="flex-box3">
+        <div>
+            <img style="margin-top: 25px;" src="./image/sushi16.jpg" width="450px" height="300px" alt="sushi16">
+            <p style="color: white; font-size: 15px; text-align: justify; width: 450px;">
+                Các món sashimi đều được thêm sốt nhà làm,
+                với mùi vị đặc trưng làm tăng lên hương vị của món ăn,
+                chinh phục cả những thực khách trước giờ không quen ăn đồ sống.
+            </p>
+        </div>
+
+        <div>
+            <img style="margin-top: 25px;" src="./image/sushi17.jpg" width="450px" height="300px" alt="sushi17">
+            <p style="color: white; font-size: 15px; text-align: justify; width: 450px;">
+                Set Obito được người đầu bếp thực hiện chỉnh chu
+                trong từng khâu chuẩn bị, mỗi set vừa vặn cho 1 người ăn,
+                tạo cảm giác ngon miệng và sự thú vị khi thưởng thức.
+            </p>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-background">
+            <div class="box-footer">
+                <div class="box-address">
+                    <h3 class="style-text-heading">OBITO</h3>
+                    <p class="box-p0">101 Him Lam, Phường Hùng Vương, Quận Hồng Bàng, Thành Phố Hải Phòng, Vietnam.</p>
+                </div>
+                <div class="box-infor">
+                    <h3 class="style-text-heading">Information link</h3>
+                    <a href="indexLogoutMenu.html"><p class="box-p1">Home</p></a>
+                    <a href="indexLogoutAboutme.html"><p class="box-p1">About Me</p></a>
+                    <a href="indexLogoutOrder.html"><p class="box-p2">Order</p></a>
+                </div>
+                <div class="box-contact">
+                    <h3 class="style-text-heading">Contact Details</h3>
+                    <p class="box-p1">info@yourself.com</p>
+                    <p class="box-p1">www.yoursite.com</p>
+                    <p class="box-p1">101 Him Lam, Phường Hùng Vương, Quận Hồng Bàng, Thành Phố Hải Phòng, Vietnam</p>
+                    <p class="box-p2">+84 123 456 789</p>
+                </div>
+                <div class="box-social">
+                    <h3 class="style-text-heading">Social</h3>
+                    <p class="box-p1"><i class="fa-brands fa-facebook"></i> | 22.543Likes</p>
+                    <p class="box-p1"><i class="fa-brands fa-twitter"></i> | 12860 Followers</p>
+                    <p class="box-p2"><i class="fa-brands fa-instagram"></i> | 3331 Pins</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

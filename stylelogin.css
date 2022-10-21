@@ -1,0 +1,255 @@
+.flex-box-login{
+    margin-top: 20px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box-login{
+    position: relative;
+    width:380px;
+    height: 420px;
+    background-color: #1c1c1c;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.box-login::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent,rgb(216, 179, 15),rgb(216, 179, 15));
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+.box-login::after{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent,rgb(216, 179, 15),rgb(216, 179, 15));
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+@keyframes animate{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+.form-login{
+    position: absolute;
+    /*  */
+    inset: 2px;
+    border-radius: 8px;
+    background: #28292d;
+    z-index: 10;
+    padding: 40px 40px;
+    display: flex;
+    flex-direction: column;
+}
+.form-login h2{
+    color: rgb(216, 179, 15);
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.1em;
+
+}
+.inputBoxlogin1{
+    position: relative;
+    width: 300px;
+    margin-top: 40px;
+}
+.inputBoxlogin1 input{
+    position: relative;
+    width:100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color:#1c1c1c;
+    font-family: 'Roboto',sans-serif;
+    letter-spacing: 0.05em;
+    z-index: 10;
+}
+
+.inputBoxlogin1 span{
+    position: absolute;
+    left: 0;
+    margin-top: 25px;
+    font-size: 1em;
+    color: gray;
+    font-family: 'Roboto',sans-serif;
+    pointer-events: none;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+.inputBoxlogin1 input:valid~span,
+.inputBoxlogin1 input:focus~span
+{
+    color: rgb(216, 179, 15);
+    transform: translateY(-35px);
+    font-size:0.75em;
+}
+/* .inputBoxlogin1 input:valid~span.inforEmail,
+.inputBoxlogin1 input:focus~span.inforEmail
+{
+    color: rgb(216, 179, 15);
+    transform: translateY(25px);
+    font-size:0.75em;
+} */
+
+.inputBoxlogin1 i{
+    position: absolute;
+    left:0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background:rgb(216, 179, 15);
+    border-radius: 4px;
+    transition: 0.5s;
+    pointer-events: none;
+    
+}
+
+.inputBoxlogin1 input:valid~i,
+.inputBoxlogin1 input:focus~i
+{
+    height:40px
+}
+
+.inputBoxlogin2{
+    position: relative;
+    width: 300px;
+    margin-top: 30px;
+}
+.inputBoxlogin2 input{
+    position: relative;
+    width:100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color:#1c1c1c;
+    font-family: 'Roboto',sans-serif;
+    letter-spacing: 0.05em;
+    z-index: 10;
+}
+
+.inputBoxlogin2 span{
+    position: absolute;
+    left: 0;
+    margin-top:25px;
+    font-size: 1em;
+    color: gray;
+    font-family: 'Roboto',sans-serif;
+    pointer-events: none;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+.inputBoxlogin2 input:valid~span,
+.inputBoxlogin2 input:focus~span
+{
+    color: rgb(216, 179, 15);
+    transform: translateY(-35px);
+    font-size:0.75em;
+}
+/* .inputBoxlogin2 input:valid~span.inforPass,
+.inputBoxlogin2 input:focus~span.inforPass
+{
+    color: rgb(216, 179, 15);
+    transform: translateY(25px);
+    font-size:0.75em;
+} */
+
+.inputBoxlogin2 i{
+    position: absolute;
+    left:0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background:rgb(216, 179, 15);
+    border-radius: 4px;
+    transition: 0.5s;
+    pointer-events: none;
+    
+}
+
+.inputBoxlogin2 input:valid~i,
+.inputBoxlogin2 input:focus~i
+{
+    background-color: rgb(216, 179, 15);
+    height:40px
+}
+.links{
+    margin-top:10px;
+    display: flex;
+    justify-content: space-between;
+}
+.links a{
+    margin: 10px 0;
+    font-size: 0.75em;
+    font-family: 'Roboto',sans-serif;
+    color: gray;
+    text-decoration: none;
+}
+.links a:hover,
+.links a:nth-child(2)
+{
+    color:rgb(216, 179, 15);
+}
+button{
+    border: none;
+    outline: none;
+    background: rgb(216, 179, 15);
+    padding: 11px 25px;
+    width: 100px;
+    margin-top: 10px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+}
+#inforEmail{
+    font-family: 'Roboto',sans-serif;
+    color:rgb(216, 179, 15);
+    font-size: 13px;
+}
+#inforPass{
+    font-family: 'Roboto',sans-serif;
+    color:rgb(216, 179, 15);
+    font-size: 13px;
+}
+/* input[type ="submit"]{
+    border: none;
+    outline: none;
+    background: rgb(216, 179, 15);
+    padding: 11px 25px;
+    width: 100px;
+    margin-top: 10px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+} */
+
+.eye-box{
+    margin-top: 50px;
+    margin-left: 310px;
+    position: absolute;
+    cursor: pointer;
+    color:rgb(216, 179, 15);
+}
+.flex-box-eye{
+    display: flex;
+    flex-direction: row;
+}

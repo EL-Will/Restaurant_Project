@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script defer src="./app.js"></script>
+    <script defer src="./appLogout.js"></script>
+</head>
+
+<body onload="checkLogout()">
+    <nav>
+        <ul>
+            <div class="box-ul">
+                <li>
+                    <a href="/indexLogoutMenu.html">Thực đơn</a>
+                </li>
+                <li>
+                    <a href="/indexLogoutAboutme.html">Về chúng tôi</a>
+                </li>
+                <li>
+                    <a href="/indexLogoutOrder.html">Đặt bàn</a>
+                </li>
+            </div>
+            <div class="box-ul2">
+                <li>
+                    <button id="logout">Đăng xuất</button>
+                </li>
+                <li>
+                    <div class="box-User">
+                        <input type="submit" id="information" onclick="userInfor()">
+                        <div class="changePass showpass">
+                            <a href="index-change-passWord.html">Đổi mật khẩu</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <span id="display-username"></span>
+                </li>
+            </div>
+        </ul>
+    </nav>
+
+    <div class="nameRestaurant">
+        <h1>OBITO</h1>
+    </div>
+    <div class="flex-image">
+        <div class="slider">
+            <div class="slides">
+                <!-- Radio button start -->
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <!-- Radio button end -->
+                <!-- slide iamge start -->
+                <div class="slide first">
+                    <img src="./image/sushi1.jpg" width="800px" height="500px" alt="sushi1">
+                    <div class="text">
+                        <p >SUSHI OBITO</p>
+                        <p>________</p>
+                        <p >Các món ăn được lựa chọn bởi bếp trưởng, mang đến bạn một trải
+                            nghiệm ẩm thực đặc sắc.</p>
+                        <p >_____</p>
+                        <p >Khai vị</p>
+                        <p >Sashimi</p>
+                        <p >10 Nigiri</p>
+                        <p >2 Cơm cuộn</p>
+                        <p >Súp Miso</p>
+                        <p >Tráng miệng</p>
+                        <p style=" font-weight: 700;">(Dành cho 1 người.)</p>
+                        <p >___________</p>
+                        <p style="color: rgb(22, 21, 21);">1,500,000 VND</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="./image/sushi2.jpg" width="800px" height="500px" alt="sushi2">
+                    <div class="text">
+                        <p>SEASONAL OBITO</p>
+                        <p >________</p>
+                        <p>Là sự kết hợp giữa các nguyên liệu tươi ngon theo mùa, mang đến
+                            cho bạn một trải nghiệm Obito độc đáo.</p>
+                        <p >_____</p>
+                        <p >Khai vị</p>
+                        <p>2 Sashimi</p>
+                        <p >5-6 Nigiri</p>
+                        <p>Cơm cuộn cầm tay</p>
+                        <p >Súp Miso</p>
+                        <p>Tráng miệng</p>
+                        <p style="font-weight: 700;">(Dành cho 1 người.)</p>
+                        <p >___________</p>
+                        <p style="color: rgb(22, 21, 21);">1,500,000 VND</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="./image/sushi3.jpg" width="800px" height="500px" alt="sushi3">
+                    <div class="text">
+                        <p>SPECIAL OBITO</p>
+                        <p >________</p>
+                        <p >Kết hợp thêm những nguyên liệu thượng hạng như nấm trufle đen,
+                            trứng cá tầm, bào ngư, bụng cá ngừ vây xanh, tạo nên một trải nghiệm vô cùng khác biệt.</p>
+                        <p >_____</p>
+                        <p >Khai vị</p>
+                        <p >3 Sashimi</p>
+                        <p >Nigiri theo mùa</p>
+                        <p >2 món móng tay</p>
+                        <p >Cơm cuộn cầm tay</p>
+                        <p >Súp Miso</p>
+                        <p >Tráng miệng</p>
+                        <p style="font-weight: 700;">(Dành cho 1 người.)</p>
+                        <p >___________</p>
+                        <p style="color: rgb(22, 21, 21);">2,300,000 VND</p>
+                    </div>
+                </div>
+                <!-- slide image end -->
+                <!-- automatic navigation start -->
+                <div class="navigation-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                </div>
+                <!-- automatic navigation end -->
+                <!-- manual navigation start -->
+                <div class="navigation-manual">
+                    <lable for="radio1" class="manual-btn" onclick="showSlide(1)"></lable>
+                    <lable for="radio1" class="manual-btn" onclick="showSlide(2)"></lable>
+                    <lable for="radio1" class="manual-btn" onclick="showSlide(3)"></lable>
+                </div>
+                <!-- manual navigation end -->
+            </div>
+        </div>
+        <!-- image slider end -->
+    </div>
+    <h2 class="nameNigiri"> Nigiri</h2>
+    <p class="txtNigiri">(2 Nigiri / phần)</p>
+    <div class="boxNigiri1">
+        <div class="flex-boxNigiri2">
+            <div class="box-son1">
+                <p class="txt-son1">Cá hồi</p>
+                <p>___________________</p>
+                <p class="txt-son2">80,000VND</p>
+            </div>
+            <div class="box-son1">
+                <p class="txt-son1">Cá ngừ trắng</p>
+                <p>___________________</p>
+                <p class="txt-son2">120,000VND</p>
+            </div>
+            <div class="box-son1">
+                <p class="txt-son1">Sò điệp</p>
+                <p>___________________</p>
+                <p class="txt-son2">120,000VND</p>
+            </div>
+            <div class="box-son1">
+                <p class="txt-son1">Cá tráp đỏ</p>
+                <p >___________________</p>
+                <p class="txt-son2">14,000VND</p>
+            </div>
+            <div class="box-son1">
+                <p class="txt-son1">Cá cam</p>
+                <p >___________________</p>
+                <p class="txt-son2">150,000VND</p>
+            </div>
+            <div class="box-son1">
+                <p class="txt-son1">Cá bơn lưỡi ngựa</p>
+                <p >___________________</p>
+                <p class="txt-son2">160,000VND</p>
+            </div>
+            <div class="box-son1">
+                <p class="txt-son1">Trứng cá hồi</p>
+                <p >___________________</p>
+                <p class="txt-son2">160,000VND</p>
+            </div>
+            <div class="box-son1">
+                <p class="txt-son1">Tôm ngọt</p>
+                <p >___________________</p>
+                <p class="txt-son2">180,000VND</p>
+            </div>
+            <div class="box-son1">
+                <p class="txt-son1">Lươn</p>
+                <p >___________________</p>
+                <p class="txt-son2">180,000VND</p>
+            </div>
+            <div class="box-son1">
+                <p class="txt-son1">Gan ngỗng</p>
+                <p >___________________</p>
+                <p class="txt-son2">220,000VND</p>
+            </div>
+            <div class="box-son1">
+                <p class="txt-son1">Bụng cá ngừ vây xanh</p>
+                <p >___________________</p>
+                <p class="txt-son2">300,000VND</p>
+            </div>
+        </div>
+    </div>
+    <div class="flexSashimi">
+        <div class="boxSashimi">Sashimi</div>
+    </div>
+    <div class="flex-image-sashimi1">
+        <div>
+            <img class="resize-image" src="./image/nigiri1.jpg" alt="nigiri1">
+            <div class="box-text-sashimi">
+                <p style="color: white; font-size: 30px;">Cá hồi rưới sốt ớt</p>
+                <p style="color: gray;">___________</p>
+                <p style="color: gray; font-size: 20px;">150,000 VND</p>
+            </div>
+        </div>
+        <div>
+            <img class="resize-image" src="./image/nigiri2.jpg" alt="nigiri1">
+            <div class="box-text-sashimi">
+                <p style="color: white; font-size: 30px;">Cá hồi sốt miso</p>
+                <p style="color: gray;">___________</p>
+                <p style="color: gray; font-size: 20px;">150,000 VND</p>
+            </div>
+        </div>
+        <div>
+            <img class="resize-image" src="./image/nigiri3.jpg" alt="nigiri1">
+            <div class="box-text-sashimi">
+                <p style="color: white; font-size: 30px;">Cá cam sốt ponzu</p>
+                <p style="color: gray;">___________</p>
+                <p style="color: gray; font-size: 20px;">230,000 VND</p>
+            </div>
+        </div>
+    </div>
+    <div class="flex-image-sashimi1">
+        <div>
+            <img class="resize-image" src="./image/nigiri4.jpg" alt="nigiri1">
+            <div class="box-text-sashimi">
+                <p style="color: white; font-size: 30px;">Cá tráp sốt lá tía tô</p>
+                <p style="color: gray;">___________</p>
+                <p style="color: gray; font-size: 20px;">230,000 VND</p>
+            </div>
+        </div>
+        <div>
+            <img class="resize-image" src="./image/nigiri5.jpg" alt="nigiri1">
+            <div class="box-text-sashimi">
+                <p style="color: white; font-size: 30px;">Cá bơn và tinh dầu nấm</p>
+                <p style="color: gray;">___________</p>
+                <p style="color: gray; font-size: 20px;">230,000 VND</p>
+            </div>
+        </div>
+        <div>
+            <img class="resize-image" src="./image/nigiri6.jpg" alt="nigiri1">
+            <div class="box-text-sashimi">
+                <p style="color: white; font-size: 30px;">Cá hồi sốt kem nấm</p>
+                <p style="color: gray;">___________</p>
+                <p style="color: gray; font-size: 20px;">230,000 VND</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-background">
+            <div class="box-footer">
+                <div class="box-address">
+                    <h3 class="style-text-heading">OBITO</h3>
+                    <p class="box-p0">101 Him Lam, Phường Hùng Vương, Quận Hồng Bàng, Thành Phố Hải Phòng, Vietnam.</p>
+                </div>
+                <div class="box-infor">
+                    <h3 class="style-text-heading">Information link</h3>
+                    <a href="indexLogoutMenu.html"><p class="box-p1">Home</p></a>
+                    <a href="indexLogoutAboutme.html"><p class="box-p1">About Me</p></a>
+                    <a href="indexLogoutOrder.html"><p class="box-p2">Order</p></a>
+                </div>
+                <div class="box-contact">
+                    <h3 class="style-text-heading">Contact Details</h3>
+                    <p class="box-p1">info@yourself.com</p>
+                    <p class="box-p1">www.yoursite.com</p>
+                    <p class="box-p1">101 Him Lam, Phường Hùng Vương, Quận Hồng Bàng, Thành Phố Hải Phòng, Vietnam</p>
+                    <p class="box-p2">+84 123 456 789</p>
+                </div>
+                <div class="box-social">
+                    <h3 class="style-text-heading">Social</h3>
+                    <p class="box-p1"><i class="fa-brands fa-facebook"></i> | 22.543Likes</p>
+                    <p class="box-p1"><i class="fa-brands fa-twitter"></i> | 12860 Followers</p>
+                    <p class="box-p2"><i class="fa-brands fa-instagram"></i> | 3331 Pins</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function showContent(n) {
+            document.getElementsByClassName('btn-' + n).checked = true;
+        }
+        //show slie//
+        function showSlide(n) {
+            document.getElementById('radio' + n).checked = true;
+        }
+        var counter = 1;
+        setInterval(function () {
+            document.getElementById('radio' + counter).checked = true;
+            counter++;
+            if (counter > 3) {
+                counter = 1;
+            }
+        }, 5000);
+    </script>
+</body>
+
+</html>

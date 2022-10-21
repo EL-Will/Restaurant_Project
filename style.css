@@ -1,0 +1,407 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+    z-index: -1;
+}
+
+ul{
+    top:0;
+    width:100%;
+    height: 100px;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    overflow: hidden;
+    z-index: 1000;
+}
+.box-ul2{
+    display: flex;
+}
+.box-ul{
+    display: flex;
+}
+
+/* display user name */
+#information{
+    width:100px;
+    height: 100px;
+    border-color:rgb(223, 217, 217);
+    border-width: 5px;
+    background-color: white;
+    font-size: 50px;
+    font-weight: 600;
+    color: green;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+
+}
+#information:hover{
+    border-color:rgb(216, 179, 15);
+    transition: all 0.3s;
+}
+.changePass{
+    width: 180px;
+    height: 50px;
+    background-color: gray;
+    border: 2px solid rgb(216, 179, 15);
+    margin-left: -40px;
+    position: fixed;
+    z-index: 10;
+    
+}
+.changePass a{
+    padding: 0px 30px;
+    line-height: 50px;
+    text-decoration: none;
+    font-family: 'Roboto',sans-serif;
+    color: white;
+    
+    text-transform: uppercase;
+}
+.showpass{
+    display: none;
+}
+.box-User{
+    position:relative;
+    display:inline-block;
+    cursor:pointer
+}
+.box-User:hover .showpass{
+    display: block;
+}
+#display-username{
+    line-height: 100px;
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Roboto',sans-serif;
+    color: gray;
+}
+.box-ul li, .box-ul2 li{
+    list-style: none;
+}
+.box-ul li a{
+    position: relative;
+    display: block;
+    padding: 40px 20px 37px;
+    font-family: 'Roboto',sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    
+}
+.box-ul li a:hover{
+    background: gray;
+    cursor: pointer;
+    transition: ease-out 0.3s;
+    color: white;
+}
+.box-ul2 .href{
+    position: relative;
+    display: block;
+    padding: 40px 20px 37px;
+    font-family: 'Roboto',sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    
+}
+.box-ul2 .href:hover{
+    background: gray;
+    cursor: pointer;
+    transition: ease-out 0.3s;
+    color: white;
+}
+a:is(:link, :active, :visited).active{
+    background: gray;
+    color: white;
+}
+.box-ul2 li button{
+    position: relative;
+    display: block;
+    padding: 40px 20px 37px;
+    font-family: 'Roboto',sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    border: none;
+    text-transform: uppercase;
+    background-color: white;
+    color: black;
+}
+.box-ul2 li button:hover{
+    background: gray;
+    cursor: pointer;
+    transition: ease-out 0.3s;
+    color: white;
+}
+
+.nameRestaurant{
+    color:rgb(216, 179, 15);
+    text-align: center;
+    letter-spacing: 10px;
+    font-size: 30px;
+    font-family:Arial, Helvetica, sans-serif;
+    margin-top: 120px;
+    margin-bottom: 20px;
+    z-index: 2;
+}
+.text{
+    width:300px;
+    height:500px;
+    background-color: rgba(255, 255, 255, 0.781);
+    border-radius: 10px;
+    font-family: 'Roboto',sans-serif;
+    margin-top: -505px; 
+    margin-bottom: 5px;
+    position: relative;
+    margin-left: 500px;
+    text-align: center;
+    padding: 80px 5px;
+}
+
+.flex-image{
+    margin: 0;
+    padding:0;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+ .slider{
+    width: 800px;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.slides{
+    width: 500%;
+    height: 500px;
+    display: flex;   
+}
+
+.slides input{
+    display: none;
+}
+.slide{
+    width: 20%;
+    transition: 2s;
+}
+.slide img{
+    width: 800px;
+    height: 500px;
+}
+.navigation-manual{
+    position: absolute;
+    width: 800px;
+    margin-top: 460px;
+    display: flex;
+    justify-content: center;
+}
+.manual-btn{
+    border: 1px solid gray;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 1s;
+}
+.manual-btn:not(:last-child){
+    margin-right:40px;
+}
+.manual-btn:hover{
+    background: white;
+}
+.mySlides {
+    display: none
+}
+#radio1:checked~.first{
+    margin-left: 0;
+}
+#radio2:checked~.first{
+    margin-left: -20%;
+}
+#radio3:checked~.first{
+    margin-left: -40%;
+}
+
+.navigation-auto{
+    position: absolute;
+    display: flex;
+    width: 800px;
+    justify-content: center;
+    margin-top: 460px;
+}
+.navigation-auto div{
+    border: 1px solid gray;
+    padding: 5px;
+    border-radius: 50%;
+    transition: 1s;
+}
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;
+}
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background: white;
+}
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background: white;
+}
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background: white;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+.nameNigiri{
+    color: white;
+    letter-spacing: 5px;
+    font-family: 'Roboto',sans-serif;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 30px;
+}
+.txtNigiri{
+    
+    color: rgb(204, 202, 202);
+    font-family:'Roboto',sans-serif;
+    font-size: 30px;
+    text-align: center;
+    
+}
+.boxNigiri1{
+    /* margin-top: 80px; */
+}
+.flex-boxNigiri2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.box-son1{
+    width: 600px;
+    height: 90px;
+    background-color: antiquewhite;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.txt-son1{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+}
+.txt-son2{
+ 
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: gray
+}
+.boxSashimi{
+    width: 500px;
+    height: 80px;
+    background-color: black;
+    margin: 20px;
+    border-bottom-style: solid;
+    border-color: gray;
+    border-width: 1px;
+    font-size: 40px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.flexSashimi{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.resize-image{
+    width: 250px;
+    height: 250px;
+}
+.box-text-sashimi{
+    width:250px;
+    height: 100px;
+    background-color: black;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.flex-image-sashimi1{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* Footer */
+.footer-background{
+    width:100%;
+    height: 350px;
+    margin-top:20px;
+    background-color: rgb(79, 79, 82);
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+
+}
+.box-p0{
+    color: rgb(216, 179, 15);
+    margin-top: 15px;
+    width: 200px;
+    text-align: justify;
+
+}
+.style-text-heading{
+    color: white;
+    letter-spacing: 0.1em;
+    /* font-size: 25px; */
+    
+}
+.box-p1{
+    color:rgb(216, 179, 15);
+    border-bottom: 1px dashed white;
+    width: 200px;
+    padding: 15px 0px 15px 0px;
+}
+.box-address{
+    display: flex;
+    flex-direction: column;
+
+}
+.box-infor{
+    display: flex;
+    flex-direction: column;
+
+}
+.box-contact{
+    display: flex;
+    flex-direction: column;
+
+}
+.box-social{
+    display: flex;
+    flex-direction: column;
+
+}
+.box-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 40px 0px;
+}
+.box-p2{
+    padding-top: 15px;
+    color: rgb(216, 179, 15);
+}
+a{
+    text-decoration: none;
+}

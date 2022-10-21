@@ -1,0 +1,205 @@
+.flex-box-reset{
+    margin-top: 20px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box-reset{
+    position: relative;
+    width:380px;
+    height: 400px;
+    background-color: #1c1c1c;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.box-reset::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 400px;
+    background: linear-gradient(0deg,transparent,rgb(216, 179, 15),rgb(216, 179, 15));
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+.box-reset::after{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 400px;
+    background: linear-gradient(0deg,transparent,rgb(216, 179, 15),rgb(216, 179, 15));
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+@keyframes animate{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+.form-reset{
+    position: absolute;
+    /*  */
+    inset: 2px;
+    border-radius: 8px;
+    background: #28292d;
+    z-index: 10;
+    padding: 40px 40px;
+    display: flex;
+    flex-direction: column;
+}
+.form-reset h2{
+    color: rgb(216, 179, 15);
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.1em;
+
+}
+.input-box-current-pass{
+    position: relative;
+    width: 300px;
+    margin-top: 40px;
+}
+.input-box-current-pass input{
+    position: relative;
+    width:100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color:#1c1c1c;
+    font-family: 'Roboto',sans-serif;
+    letter-spacing: 0.05em;
+    z-index: 10;
+}
+
+.input-box-current-pass span{
+    position: absolute;
+    left: 0;
+    margin-top:25px;
+    font-size: 1em;
+    color: gray;
+    font-family: 'Roboto',sans-serif;
+    pointer-events: none;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+.input-box-current-pass input:valid~span,
+.input-box-current-pass input:focus~span
+{
+    color: rgb(216, 179, 15);
+    transform: translateY(-35px);
+    font-size:0.75em;
+}
+
+.input-box-current-pass i{
+    position: absolute;
+
+    left:0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background:rgb(216, 179, 15);
+    border-radius: 4px;
+    transition: 0.5s;
+    pointer-events: none;
+    
+}
+
+.input-box-current-pass input:valid~i,
+.input-box-current-pass input:focus~i
+{
+    height:40px
+}
+
+.input-box-new-pass{
+    position: relative;
+    width: 300px;
+    margin-top: 30px;
+}
+.input-box-new-pass input{
+    position: relative;
+    width:100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color:#1c1c1c;
+    font-family: 'Roboto',sans-serif;
+    letter-spacing: 0.05em;
+    z-index: 10;
+}
+
+.input-box-new-pass span{
+    position: absolute;
+    left: 0;
+    margin-top:25px;
+    font-size: 1em;
+    color: gray;
+    font-family: 'Roboto',sans-serif;
+    pointer-events: none;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+.input-box-new-pass input:valid~span,
+.input-box-new-pass input:focus~span
+{
+    color: rgb(216, 179, 15);
+    transform: translateY(-35px);
+    font-size:0.75em;
+}
+
+.input-box-new-pass i{
+    position: absolute;
+    left:0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background:rgb(216, 179, 15);
+    border-radius: 4px;
+    transition: 0.5s;
+    pointer-events: none;
+    
+}
+
+.input-box-new-pass input:valid~i,
+.input-box-new-pass input:focus~i
+{
+    height:40px
+}
+#infor-current-pass{
+    font-family: 'Roboto',sans-serif;
+    color:rgb(216, 179, 15);
+    font-size: 13px;
+}
+#infor-new-pass{
+    font-family: 'Roboto',sans-serif;
+    color:rgb(216, 179, 15);
+    font-size: 13px;
+}
+button{
+    border: none;
+    outline: none;
+    background: rgb(216, 179, 15);
+    padding: 11px 25px;
+    width: 100px;
+    margin-top: 50px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.box-button{
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,34 @@
+.flex1{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 70px 0px 0px 0px;
+    /* align-content: center;
+    align-items: center; */
+}
+.flex3{
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    box-sizing: border-box;
+}
+.box1-aboutme{
+    margin-top: 10px;
+    width: 100%;
+    height: 500px;
+    background-color: rgb(53, 51, 51);
+    
+}
+.border1{
+    border: 2px solid white;
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 37%;
+    margin-top: 20px;
+}
+.flex-box3{
+    display: flex;
+    justify-content: space-evenly;
+    
+}

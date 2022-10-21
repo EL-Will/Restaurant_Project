@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-singup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" href="style3.css"> -->
+    <script defer src="./app.js"></script>
+    <script defer src="./appSingup.js"></script>
+</head>
+
+<body onload="statusLogin()">
+    <nav>
+        <ul>
+            <div class="box-ul">
+                <li>
+                    <a href="/index.html">Thực đơn</a>
+                </li>
+                <li>
+                    <a href="/index-aboutme.html">Về chúng tôi</a>
+                </li>
+                <li>
+                    <a href="/index-order.html">Đặt bàn</a>
+                </li>
+            </div>
+            <div class="box-ul2">
+                <li>
+                    <a class="href" href="/index-login.html">Đăng nhập</a>
+                </li>
+                <li>
+                    <a class="href" href="/index-singup.html">Đăng ký</a>
+                </li>
+            </div>
+        </ul>
+    </nav>
+    <div class="nameRestaurant">
+        <h1>OBITO</h1>
+    </div>
+    <div class="flex-box-logout">
+        <div class="box-logout">
+            <div class="form-logout">
+                <h2>Sing up</h2>
+                <div class="input-Box-logout1">
+                    <input type="text" required="required" class="singup-input-User">
+                    <span>Username</span>
+                    <i></i>
+                </div>
+                <span id="error-user-name"></span>
+                <div class="input-Box-email">
+                    <input type="text" required="required" class="singup-input-email">
+                    <span>Email</span>
+                    <i></i>
+                </div>
+                <span id="error-email"></span>
+                <div class="flex-box-eye">
+                    <div class="input-Box-logout2">
+                        <input type="password" required="required" class="singup-input-Pass">
+                        <span>Password</span>
+                        <i></i>
+                    </div>
+                    <i class="fa-regular fa-eye-slash eye-box" onclick="showPass()" id="eye"></i>
+                </div>
+                <span id="error-pass"></span>
+                <div class="flex-box-eye">
+
+                    <div class="input-Box-logout3">
+                        <input type="password" required="required" class="singup-input-confirmPass">
+                        <span>Confirm Password</span>
+                        <i></i>
+                    </div>
+                    <i class="fa-regular fa-eye-slash eye-box-confirm" onclick="showConfirmpass()" id="eye-confirmPass"></i>
+                </div>
+                <span id="error-confirm-pass"></span>
+                <div class="input-city">
+                    <span>City</span>
+                    <select id="city" onchange="selectProvine()"></select>
+                    <i></i>
+                </div>
+                <div class="input-district">
+                    <span>District</span>
+                    <select id="district"></select>
+
+                    <i></i>
+                </div>
+                <div class="input-ward">
+                    <span>Ward</span>
+                    <select id="ward"></select>
+                    <i></i>
+                </div>
+
+                <button id="Singup">Singup</button>
+                <!-- <input type="submit" value="Login" id="login"> -->
+            </div>
+        </div>
+    </div>
+    <div class="box-notification">
+        <div class="toast">
+            <div class="toast-content">
+                <i class="fas fa-solid fa-check check"></i>
+
+                <div class="message">
+                    <span class="text-notifi text-1">Thành công</span>
+                    <span class="text-notifi text-2">Bạn đã đăng ký thành công</span>
+                </div>
+            </div>
+            <i class="fa-solid fa-xmark close"></i>
+
+            <div class="progress"></div>
+        </div>
+    </div>
+</body>
+
+</html>
