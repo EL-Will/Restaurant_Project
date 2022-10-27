@@ -49,6 +49,17 @@ function myFunctionReset(){
             messageUser.innerHTML ='';
             window.location.assign('index-reset-pass.html');
             localStorage.setItem('indexForgot',indexForgot);
+            // Email.send({
+            //     Host : "smtp.elasticemail.com",
+            //     Username : "thienbinh1155@gmail.com",
+            //     Password : "CA7C38D9E71A37014418505567D460DE22FB",
+            //     To : 'vutuan.vmu@gmail.com',
+            //     From : "thienbinh1155@gmail.com",
+            //     Subject : "This is the subject",
+            //     Body : "And this is the body"
+            // }).then(
+            //   message => alert(message)
+            // );
         }
     }
 }

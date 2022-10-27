@@ -47,7 +47,26 @@
     font-family: 'Roboto', sans-serif;
 }
 
-.box-time input {
+/* .box-time input {
+    width: 220px;
+    padding: 20px 10px 10px;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #1c1c1c;
+    font-family: 'Roboto', sans-serif;
+} */
+.box-time {
+    width: 400px;
+    height: 100px;
+}
+.box-time label {
+    color: white;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+.box-time select {
+    margin-left: 0px;
     width: 220px;
     padding: 20px 10px 10px;
     border: none;
